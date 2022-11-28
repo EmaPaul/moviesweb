@@ -24,7 +24,7 @@ export default function GetPeliculas() {
     
     useEffect(()=>{
       setLoading(true);
-      const searchUrl = search?"/search/movie?api_key="+process.env.REACT_APP_KEY+"&query="+search+"&page="+currentPage:"/movie/popular/?api_key="+process.env.REACT_APP_KEY+"&page="+currentPage
+      const searchUrl = search?"/search/movie?api_key="+process.env.REACT_APP_KEY+"&query="+search+"&page="+currentPage:"/discover/movie?api_key="+process.env.REACT_APP_KEY+"&page="+currentPage
       fetch("https://api.themoviedb.org/3"+searchUrl).then(res=>res.json())
       .then((data)=>{
         setLoading(false)
