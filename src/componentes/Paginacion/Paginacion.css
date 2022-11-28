@@ -114,11 +114,6 @@
 
 /*Horizontal*/
 
-@media screen and (max-width: 1520px){
-    .paginacion{
-        margin-left:651px;
-    }
-}
 
 @media screen and (max-width: 915px){
     .paginacion{
