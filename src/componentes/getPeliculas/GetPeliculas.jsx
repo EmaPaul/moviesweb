@@ -20,19 +20,19 @@ export default function GetPeliculas() {
       setCurrentPage(pageNumber);
     };
 
-    let api="https://api.themoviedb.org/3";
+    
     
     useEffect(()=>{
       setLoading(true);
       const searchUrl = search?"/search/movie?api_key="+process.env.REACT_APP_KEY+"&query="+search+"&page="+currentPage:"/movie/popular/?api_key="+process.env.REACT_APP_KEY+"&page="+currentPage
-      fetch(api+searchUrl).then(res=>res.json())
+      fetch("https://api.themoviedb.org/3"+searchUrl).then(res=>res.json())
       .then((data)=>{
         setLoading(false)
         setMovies(data.results)
         setMax(data.total_pages) 
       })
         
-    },[search,currentPage,api])
+    },[search,currentPage])
 
     if(!loading && movies.length===0){
       return <NoResults/>

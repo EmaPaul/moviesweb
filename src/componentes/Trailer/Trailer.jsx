@@ -5,13 +5,12 @@ import Spinner from '../Spinner/Spinner';
 import './Trailer.css'
 
 export default function Trailer() {
-    let api="https://api.themoviedb.org/3";
     const { movieId } = useParams();
     const [video, setVideo]=useState(null);
     const [loading,setLoading] = useState(true);
     useEffect(()=>{
         setLoading(true);
-        fetch(api+"/movie/"+movieId+"/videos?api_key="+process.env.REACT_APP_KEY).then(res=>res.json())
+        fetch("https://api.themoviedb.org/3/movie/"+movieId+"/videos?api_key="+process.env.REACT_APP_KEY).then(res=>res.json())
         .then((data)=>{
             
             const trailer = data.results.find(
@@ -20,7 +19,7 @@ export default function Trailer() {
             setLoading(false)
             setVideo(trailer?trailer:data.results[0])
         }).catch(err=>console.log(err))
-    },[movieId,api])
+    },[movieId])
     if(!loading && !video){
         return <SinTrailer/>
     }

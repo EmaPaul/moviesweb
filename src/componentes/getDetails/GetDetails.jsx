@@ -6,19 +6,18 @@ import placeholder from '../imagenes/placeholder.jpg';
 import'./GetDetails.css'
 
 export default function GetDetails() {
-    let api="https://api.themoviedb.org/3";
     const [loading,setLoading] = useState(true);
     const { movieId } = useParams();
     const [movie,setMovie]=useState(null);
 
     useEffect(()=>{
       setLoading(true);
-        fetch(api+"/movie/"+movieId+"?api_key="+process.env.REACT_APP_KEY).then(res=>res.json())
+        fetch("https://api.themoviedb.org/3/movie/"+movieId+"?api_key="+process.env.REACT_APP_KEY).then(res=>res.json())
         .then((data)=>{
             setLoading(false)
             setMovie(data)
         })
-    },[movieId,api])
+    },[movieId])
 
     if(loading){
       return <Spinner/>
