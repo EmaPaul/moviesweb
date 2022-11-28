@@ -121,6 +121,11 @@
     }
 }
 
+@media screen and (max-width: 844px){
+    .paginacion{
+        margin-left:320px;
+    }
+}
 
 
 @media screen and (max-width: 667px){
@@ -146,6 +151,12 @@
     }
 }
 
+
+@media screen and (max-width: 390px){
+    .paginacion{
+        margin-left:92px;
+    }
+}
 
 
 
