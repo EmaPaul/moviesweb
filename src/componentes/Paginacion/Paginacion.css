@@ -154,6 +154,12 @@
 }
 
 
+@media screen and (max-width: 580px){
+    .paginacion{
+        margin-left:189px;
+    }
+}
+
 /*vertical*/
 
 @media screen and (max-width: 414px){
