@@ -14,7 +14,7 @@ export default function Trailer() {
         .then((data)=>{
             
             const trailer = data.results.find(
-                (vid) => vid.type === "Trailer"
+                (vid) => vid.name === "Official Trailer" || vid.name==="Official Final Trailer" || vid.name==="Official Trailer: Part 1"
             );
             setLoading(false)
             setVideo(trailer?trailer:data.results[0])
