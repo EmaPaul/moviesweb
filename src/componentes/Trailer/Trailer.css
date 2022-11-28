@@ -30,6 +30,14 @@
 }
 
 
+@media screen and (max-width: 740px){
+    .ventana{
+        width: 160%;
+        height:196%;
+        margin-left: 40px;
+    }
+}
+
 
 @media screen and (max-width: 667px){
     .ventana{
