@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Link to="/">
-        <h1 className="title">🍿 🍿 EMAPELIS 🍿 🍿</h1>
+        <h1 className="title">🍿 EMAPELIS 🍿</h1>
       </Link>
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
