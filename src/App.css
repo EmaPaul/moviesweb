@@ -1,0 +1,14 @@
+.title{
+    text-align:center;
+    margin-left:20px;
+    font-family: 'Shippori Antique B1', sans-serif;
+    text-shadow:0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1d4622, 0 0 40px #17a50a, 0 0 50px #20680f, 0 0 60px #13440d, 0 0 70px #012606;
+    color:white;
+    user-select:none;
+}
+
+@media screen and (max-width: 560px){
+   .title{
+       margin-left:1px
+   }
+}

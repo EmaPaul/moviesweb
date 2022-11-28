@@ -1,0 +1,75 @@
+.ventana{
+    width: 300%;
+    height:300%;
+}
+
+.trailer{
+    margin-right: 40%;
+    margin-top: 2%;
+    margin-bottom: 30%;
+    
+}
+
+/*Horizontal*/
+
+
+@media screen and (max-width: 896px){
+    .ventana{
+        width: 240%;
+        height:230%;
+        margin-left: -10px;
+    }
+}
+
+
+@media screen and (max-width: 667px){
+    .ventana{
+        width: 160%;
+        height:196%;
+        margin-left: 30px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .ventana{
+        width: 160%;
+        height:196%;
+        margin-left: 30px;
+    }
+}
+
+/*Vertical*/
+
+
+@media screen and (max-width: 414px){
+    .ventana{
+        width: 350px;
+        height: 300px;
+        margin-left: 169px;
+        margin-bottom: -20%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 375px){
+    .ventana{
+        width: 350px;
+        height: 300px;
+        margin-left: 150px;
+        margin-bottom: -20%;
+    }
+}
+
+
+
+@media screen and (max-width: 360px){
+    .ventana{
+        width: 350px;
+        height: 300px;
+        margin-left: 144px;
+        margin-bottom: -20%;
+    }
+}

@@ -1,0 +1,25 @@
+.movieCard{
+    list-style: none;
+    font-size: 1.4rem;
+    font-family: 'Shippori Antique B1', sans-serif;
+    color:white;
+    text-align: center;
+    user-select: none;
+}
+ 
+.movieCard:hover{
+    opacity: 0.8;;
+}
+ 
+.movieImage{
+    border-radius:10px;
+    background-color:azure;
+    user-select: none;
+}
+ 
+@media screen and (max-width: 560px){
+    .movieImage{
+        width: 90%;
+        height: auto;
+    }
+}
