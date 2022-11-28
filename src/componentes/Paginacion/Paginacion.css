@@ -145,6 +145,7 @@
     }
 }
 
+
 @media screen and (max-width: 667px){
     .paginacion{
         margin-left:230px;
@@ -169,7 +170,7 @@
 
 @media screen and (max-width: 720px){
     .paginacion{
-        margin-left:256px;
+        margin-left:239px;
     }
 }
 
