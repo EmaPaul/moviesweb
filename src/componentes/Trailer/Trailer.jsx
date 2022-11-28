@@ -5,7 +5,7 @@ import Spinner from '../Spinner/Spinner';
 import './Trailer.css'
 
 export default function Trailer() {
-    const api="https://api.themoviedb.org/3";
+    let api="https://api.themoviedb.org/3";
     const { movieId } = useParams();
     const [video, setVideo]=useState(null);
     const [loading,setLoading] = useState(true);
@@ -20,7 +20,7 @@ export default function Trailer() {
             setLoading(false)
             setVideo(trailer?trailer:data.results[0])
         }).catch(err=>console.log(err))
-    },[movieId])
+    },[movieId,api])
     if(!loading && !video){
         return <SinTrailer/>
     }

@@ -6,7 +6,7 @@ import placeholder from '../imagenes/placeholder.jpg';
 import'./GetDetails.css'
 
 export default function GetDetails() {
-    const api="https://api.themoviedb.org/3";
+    let api="https://api.themoviedb.org/3";
     const [loading,setLoading] = useState(true);
     const { movieId } = useParams();
     const [movie,setMovie]=useState(null);
@@ -18,7 +18,7 @@ export default function GetDetails() {
             setLoading(false)
             setMovie(data)
         })
-    },[movieId])
+    },[movieId,api])
 
     if(loading){
       return <Spinner/>

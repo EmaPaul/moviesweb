@@ -20,7 +20,7 @@ export default function GetPeliculas() {
       setCurrentPage(pageNumber);
     };
 
-    const api="https://api.themoviedb.org/3";
+    let api="https://api.themoviedb.org/3";
     
     useEffect(()=>{
       setLoading(true);
@@ -32,7 +32,7 @@ export default function GetPeliculas() {
         setMax(data.total_pages) 
       })
         
-    },[search,currentPage])
+    },[search,currentPage,api])
 
     if(!loading && movies.length===0){
       return <NoResults/>
