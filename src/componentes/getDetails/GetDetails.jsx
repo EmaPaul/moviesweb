@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Spinner from '../Spinner/Spinner';
 import Trailer from '../Trailer/Trailer';
-import placeholder from '../imagenes/placeholder.jpg';
+import placeholder2 from '../imagenes/placeholder2.jpg';
 import'./GetDetails.css'
 
 export default function GetDetails() {
@@ -26,7 +26,7 @@ export default function GetDetails() {
     if(!movie){
         return null
     }
-    const urlImage=movie.poster_path?"https://image.tmdb.org/t/p/w500/"+movie.poster_path:placeholder
+    const urlImage=movie.poster_path?"https://image.tmdb.org/t/p/w500/"+movie.poster_path:placeholder2
     return (
     <div className="detailsContainer">
         <img
@@ -43,7 +43,7 @@ export default function GetDetails() {
           {movie.genres.map((genre) => genre.name).join(", ")}
         </p>
         <p>
-          <strong>Description:</strong> {movie.overview}
+          <strong>Description:</strong> {movie.overview?movie.overview:"There is no description 😟"}
         </p>
       </div>
       <Trailer/>
