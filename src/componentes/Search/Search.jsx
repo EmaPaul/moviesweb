@@ -11,8 +11,10 @@ export default function Search() {
 
   function handleSubmit(e){
     e.preventDefault();
-    navigate("/?movie="+searchText);
-    setSearchText("")
+    if(searchText!==""){
+      navigate("/?movie="+searchText);
+      setSearchText("")
+    }
   }
 
   return (
