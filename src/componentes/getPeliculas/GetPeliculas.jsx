@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
-import useQuery from "../../hooks/useQuery";
+import { useSearchParams } from "react-router-dom";
+// import useQuery from "../../hooks/useQuery";
 import About from "../About/About";
 import { MovieCard } from "../MovieCard/MovieCard";
 import NoResults from "../NoResults/NoResults";
@@ -13,7 +14,10 @@ export default function GetPeliculas() {
     const [currentPage, setCurrentPage] = useState(1);
     const [max,setMax]=useState(1)
     
-    const query =useQuery()
+    // const query =useQuery()
+    // const search = query.get('movie')
+
+    const [query] = useSearchParams()
     const search = query.get('movie')
 
     const paginado = (pageNumber) => {
